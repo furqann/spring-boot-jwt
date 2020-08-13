@@ -1,0 +1,15 @@
+package com.eclat.solutions.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+//@Entity
+public class User {
+//    @Id
+//    @Column(name = "id")
+    private Integer id;
+
+//    @Column(name = "email")
+    private String email;
+}
