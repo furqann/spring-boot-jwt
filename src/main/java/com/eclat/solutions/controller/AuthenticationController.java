@@ -1,6 +1,6 @@
 package com.eclat.solutions.controller;
 
-import com.eclat.solutions.configuration.SuperUserDetailsService;
+import com.eclat.solutions.configuration.EclatUserDetailsService;
 import com.eclat.solutions.model.AuthenticationRequest;
 import com.eclat.solutions.model.AuthenticationResponse;
 import com.eclat.solutions.util.JwtUtil;
@@ -23,7 +23,7 @@ public class AuthenticationController {
     AuthenticationManager authenticationManager;
 
     @Autowired
-    SuperUserDetailsService superUserDetailsService;
+    EclatUserDetailsService eclatUserDetailsService;
 
     @PostMapping("authenticate")
     public ResponseEntity<?> authenticate(@RequestBody AuthenticationRequest request) throws Exception {
@@ -33,7 +33,7 @@ public class AuthenticationController {
         } catch (final BadCredentialsException e) {
             throw new Exception("Wrong Credentials", e);
         }
-        final UserDetails userDetails = superUserDetailsService.loadUserByUsername(request.getUsername());
+        final UserDetails userDetails = eclatUserDetailsService.loadUserByUsername(request.getUsername());
         final String jwt = new JwtUtil().generateToken(userDetails);
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }

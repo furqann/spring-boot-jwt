@@ -1,9 +1,8 @@
 package com.eclat.solutions.filter;
 
-import com.eclat.solutions.configuration.SuperUserDetailsService;
+import com.eclat.solutions.configuration.EclatUserDetailsService;
 import com.eclat.solutions.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,7 +20,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
 
-    private final SuperUserDetailsService userDetailsService;
+    private final EclatUserDetailsService userDetailsService;
     private final JwtUtil jwtUtil;
 
     @Override
