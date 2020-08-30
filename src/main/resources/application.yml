@@ -1,2 +1,8 @@
 server:
   port: 8881
+spring:
+  liquibase:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
