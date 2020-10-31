@@ -1,0 +1,3 @@
+  ---------------
+| JWT APPLICATION |
+  --------------- Spring Boot ${spring-boot.formatted-version}
