@@ -1,6 +1,6 @@
 # Step 1
 echo "Running maven clean install"
-mvn clean install
+mvn clean -DskipTests=true install
 
 # Step 2
 echo "Stopping and deleting container and image"
