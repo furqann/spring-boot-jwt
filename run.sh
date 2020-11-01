@@ -14,4 +14,4 @@ docker rmi eclat
 # docker run -d -p 8881:8881 --name eclat-service eclat # Running created image in a container
 
 #Step 3 updated by docker-compose
-docker-compose up
+docker-compose up -d
