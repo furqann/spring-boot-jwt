@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   elcat-service:
-    container_name: elcat-service
+    container_name: eclat-service
     build: .
     image: eclat:latest
     ports:
