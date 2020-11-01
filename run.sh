@@ -16,4 +16,4 @@ docker-compose down --rmi all  #Stops and remove all containers and images speci
 
 #Step 3 updated by docker-compose
 #docker-compose up -d
-docker-compose up -d --build
+docker-compose up -d --build # Make sures image is built every time
